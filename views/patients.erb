@@ -1,0 +1,9 @@
+<h1>Patients</h1>
+
+<% @patients.each do |patient| %>
+  <div class="patients">
+      <h3><%= patient.name %></h3>
+      <p><%= patient.dob.delete("00:00:00") %></p>
+      <p>Doctor: <%= patient.doc_name%></p>
+  </div>
+  <% end %>
